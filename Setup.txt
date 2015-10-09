@@ -1,0 +1,21 @@
+This base project has been setup with layers to seperate concerns. 
+The WebApi project, .Web gets to data via the .Services project. The .Services project in turn marshalls requests via the .Data project, 
+specifically via a repository.
+The .Data project depends upon the .Data.Models project to define the models. We have separated the .Models project out so we can share 
+those with other projects as necessary, for example a UnitTest project or another Web Project.
+
+To make this project work well, it would be best to setup an IIS server and created a dedicated website for it. Here are the steps.
+1) Make sure you have IIS installed on your system.
+2) Open the IIS manager tool.
+3) Expand the "Sites" node and right click to add a new Web Site.
+4) Give it a name like "Sort2015".
+5) Select the physical path to the Sort2015.Web folder.
+6) It would be best to specify a Host Name like "sort-dev". You will need to add a host entry in your c:\Windows\Drivers\Etc\Hosts file of  
+		127.0.0.1   sort-dev
+7) In the Actions pane on the right, click Edit Permissions for our newly created site.
+8) Select the Security tab.
+9) Click the Edit... button.
+10) Click the Add... button.
+11) Type USERS in the big box labeled "Enter the object names to select" and click OK, then closeout the remaining dialogs.
+12) Test to make sure everything worked by opening a browser and typing http://sort-dev (or whatever you set in your hosts file) and see if you get a page returned.
+

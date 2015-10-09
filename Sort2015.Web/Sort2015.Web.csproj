@@ -15,7 +15,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Sort2015.Web</RootNamespace>
     <AssemblyName>Sort2015.Web</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication />
@@ -183,6 +183,10 @@
     <ProjectReference Include="..\Sort2015.Data\Sort2015.Data.csproj">
       <Project>{93425a6e-b122-43a3-b78f-e8b8cf274318}</Project>
       <Name>Sort2015.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sort2015.Models\Sort2015.Data.Models.csproj">
+      <Project>{cca68ffb-60d1-4572-bc7e-4030c26250e4}</Project>
+      <Name>Sort2015.Data.Models</Name>
     </ProjectReference>
     <ProjectReference Include="..\Sort2015.Services\Sort2015.Services.csproj">
       <Project>{bebaf741-6637-4552-8226-d4ce19956533}</Project>
