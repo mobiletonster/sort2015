@@ -1,0 +1,23 @@
+
+
+
+2. -------------------------------------------------------
+        private IGLFeedServices _glFeedService;
+
+        public DailyGemsController()
+        {
+            _glFeedService = new GLFeedServices();
+        }
+
+        public DailyGemsController(IGLFeedServices glFeedService)
+        {
+            _glFeedService = glFeedService;
+        }
+
+        // GET: DailyGems
+        [HttpGet]
+        [Route("api/dailygems")]
+        public List<DailyGem> GetDailyGems()
+        {
+            return _glFeedService.GetDailyGems();
+        }
