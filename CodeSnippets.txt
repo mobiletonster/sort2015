@@ -1,7 +1,5 @@
 
-
-
-2. -------------------------------------------------------
+1. ------------ Basic Routing, first Controller Action -------------------------
         private IGLFeedServices _glFeedService;
 
         public DailyGemsController()
@@ -21,3 +19,44 @@
         {
             return _glFeedService.GetDailyGems();
         }
+
+2. -------------- Daily Gems View Model ---------------------------
+
+    public class DailyGemVM
+    {
+        public int Id { get; set; }
+
+        [StringLength(250)]
+        public string Guid { get; set; }
+
+        [StringLength(500)]
+        public string Title { get; set; }
+
+        [StringLength(500)]
+        public string Link { get; set; }
+
+        public string Quote { get; set; }
+
+        [StringLength(250)]
+        public string Author { get; set; }
+
+        [StringLength(1000)]
+        public string LdsOrgUrl { get; set; }
+
+        public DateTime? PubDate { get; set; }
+
+        [StringLength(10)]
+        public string LangCode { get; set; }
+
+        public DateTime? ModifiedDate { get; set; }
+    }
+
+3. --------------  Camel Case Resolver -----------------------------
+
+            config.Formatters.JsonFormatter.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
+
+3a. --------------   Include Error Detail Policy
+
+            config.IncludeErrorDetailPolicy = IncludeErrorDetailPolicy.Always;
+
+4. --------------

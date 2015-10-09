@@ -13,6 +13,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sort2015.Web", "Sort2015.We
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "code", "code", "{4D5E3151-E046-48B2-9C47-B0186DEB2DE4}"
 	ProjectSection(SolutionItems) = preProject
+		Agenda.txt = Agenda.txt
 		CodeSnippets.txt = CodeSnippets.txt
 		Setup.txt = Setup.txt
 	EndProjectSection

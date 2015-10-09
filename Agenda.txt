@@ -1,0 +1,18 @@
+1) Slides - intro to pragmatic REST concepts 101
+2) Demo Time - Write code. Begin with this project by cloning from repo.
+3) Normally create a new WebApi project, but just use Sort2015.Web
+4) Setup IIS - follow the Setup.txt guide in this solution.
+5) Basic Routing (Attribute Based)
+6) Test with a tool such as Fiddler, or Rest Client, or Postman, Soap UI, etc.
+7) Lets strip the object down smaller and make a simple ViewModel.
+8) Lets add CamelCaseResolver to WebApiConfigs.cs Register method to make pretty JSON.
+8a) Lets add the IncludeErrorDetailPolicy while we are in here.
+9) Lets add Swagger via Swashbuckle.
+10) Change the return type to IHttpActionResult 
+11) Add annotation attribute [ResponseType(typeof(ENTITY))] where ENTITY is the entity type
+12) Other Media Formatters - Lets add CSV
+13) Lets build a POST method to add new Daily Gems.
+14) Lets create a simple Security Attribute.
+15) Lets add some custom exception handling
+16) Versioning our API
+17) Return other types, ie. Images?
