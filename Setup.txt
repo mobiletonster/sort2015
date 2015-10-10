@@ -19,3 +19,5 @@ To make this project work well, it would be best to setup an IIS server and crea
 11) Type USERS in the big box labeled "Enter the object names to select" and click OK, then closeout the remaining dialogs.
 12) Test to make sure everything worked by opening a browser and typing http://sort-dev (or whatever you set in your hosts file) and see if you get a page returned.
 
+You will also need to change from a LocalDB instance to a hosted SQL Server instance OR do some crazy permissions settings.
+
