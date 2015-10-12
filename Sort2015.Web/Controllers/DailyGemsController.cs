@@ -1,5 +1,4 @@
 ﻿using Sort2015.Data.Models;
-using Sort2015.Models.ViewModels;
 using Sort2015.Services;
 using Sort2015.Web.ViewModels;
 using System;
