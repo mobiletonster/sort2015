@@ -24,6 +24,20 @@
 
     public class DailyGemVM
     {
+	    public DailyGemVM(DailyGem dg)
+        {
+            this.Id = dg.Id;
+            this.Guid = dg.Guid;
+            this.Author = dg.Author;
+            this.LangCode = dg.LangCode;
+            this.LdsOrgUrl = dg.LdsOrgUrl;
+            this.Link = dg.Link;
+            this.ModifiedDate = dg.ModifiedDate;
+            this.PubDate = dg.PubDate;
+            this.Quote = dg.Quote;
+            this.Title = dg.Title;
+        }
+
         public int Id { get; set; }
 
         [StringLength(250)]
