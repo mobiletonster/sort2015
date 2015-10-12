@@ -63,4 +63,8 @@
 
              config.Formatters.Add(new CSVMediaTypeFormatter());
 
-5.
+5. -------------- ADD BsonMediaTypeFormatter to App_Start WebApiConfig.cs --------------
+
+			config.Formatters.Add(new BsonMediaTypeFormatter());
+
+6. --------------

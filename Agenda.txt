@@ -10,7 +10,7 @@
 9) Lets add Swagger via Swashbuckle.
 10) Change the return type to IHttpActionResult 
 11) Add annotation attribute [ResponseType(typeof(ENTITY))] where ENTITY is the entity type
-12) Other Media Formatters - Lets add CSV
+12) Other Media Formatters - Lets add CSV, BSON
 13) Lets build a POST method to add new Daily Gems.
 14) Lets create a simple Security Attribute.
 15) Lets add some custom exception handling
