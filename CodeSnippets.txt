@@ -55,8 +55,16 @@
 
             config.Formatters.JsonFormatter.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
 
-3a. --------------   Include Error Detail Policy
+3a. --------------   Include Error Detail Policy ----------------------
 
             config.IncludeErrorDetailPolicy = IncludeErrorDetailPolicy.Always;
 
-4. --------------
+4. -------------- ADD CSVMediaTypeFormatter to App_Start WebApiConfig.cs ---------------
+
+             config.Formatters.Add(new CSVMediaTypeFormatter());
+
+5. -------------- ADD BsonMediaTypeFormatter to App_Start WebApiConfig.cs --------------
+
+			config.Formatters.Add(new BsonMediaTypeFormatter());
+
+6. --------------
