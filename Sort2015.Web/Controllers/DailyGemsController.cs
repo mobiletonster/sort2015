@@ -29,5 +29,12 @@ namespace Sort2015.Web.Controllers
         {
             return _glFeedService.GetDailyGems();
         }
+
+        [HttpPost]
+        [Route("api/dailygems")]
+        public DailyGem AddDailyGem(DailyGem dailyGem)
+        {
+            return _glFeedService.AddDailyGem(dailyGem);
+        }
     }
 }
