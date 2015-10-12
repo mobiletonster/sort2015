@@ -1,7 +1,9 @@
-﻿using System;
+﻿using Sort2015.Data.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
+using System.Web.Http.OData.Builder;
 
 namespace Sort2015.Web
 {
@@ -19,6 +21,10 @@ namespace Sort2015.Web
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
+
+            ODataConventionModelBuilder builder = new ODataConventionModelBuilder();
+            builder.EntitySet<DailyGem>("DailyGems");
+            config.Routes.MapODataRoute("ODataRoute", "odata", builder.GetEdmModel());
         }
     }
 }
