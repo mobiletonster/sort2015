@@ -67,4 +67,28 @@
 
 			config.Formatters.Add(new BsonMediaTypeFormatter());
 
-6. --------------
+6. -------------- Add a Post Method ----------------------
+
+        [HttpPost]
+        [Route("api/dailygems")]
+        public DailyGem AddDailyGem(DailyGem dailyGem)
+        {
+            return _glFeedService.AddDailyGem(dailyGem);
+        }
+
+7. --------------- Sample POST DATA put into swagger ----------------------
+
+{
+  "Title": "Love one another",
+  "Link": "/general-conference",
+  "RawDescription": "",
+  "Quote": "We should learn to love one another in spite of our technologies",
+  "Author": "Tony Spencer",
+  "LdsOrgUrl": "https://lds.org/general-conference",
+  "Topic": "Love",
+  "SourceRss": "NEW",
+  "PubDate": "2015-10-12T16:42:30.508Z",
+  "LangCode": "ENG",
+  "CreatedDate": "2015-10-12T16:42:30.508Z",
+  "ModifiedDate": "2015-10-12T16:42:30.508Z"
+}
