@@ -1,11 +1,14 @@
 ﻿using Sort2015.Data.Models;
 using Sort2015.Services;
+using Sort2015.Web.Extensions;
 using Sort2015.Web.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Web;
 using System.Web.Http;
+using System.Web.Http.Description;
 
 namespace Sort2015.Web.Controllers
 {
@@ -26,9 +29,12 @@ namespace Sort2015.Web.Controllers
         // GET: DailyGems
         [HttpGet]
         [Route("api/dailygems")]
-        public List<DailyGemVM> GetDailyGems()
+        [ResponseType(typeof(List<DailyGemVM>))]
+        public IHttpActionResult GetDailyGems()
         {
-            return _glFeedService.GetDailyGems().Select(m=>new DailyGemVM(m)).ToList();
+            var gems = _glFeedService.GetDailyGems().Select(m => new DailyGemVM(m)).ToList();
+            //return Ok(gems);
+            return new CustomActionResult<List<DailyGemVM>>(HttpStatusCode.OK, gems);
         }
 
         [HttpPost]

@@ -138,6 +138,8 @@
     <Compile Include="App_Start\SwaggerConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\DailyGemsController.cs" />
+    <Compile Include="Extensions\CustomActionResult.cs" />
+    <Compile Include="Extensions\ExtensionMethods.cs" />
     <Compile Include="Formatters\CSVMediaTypeFormatter.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
