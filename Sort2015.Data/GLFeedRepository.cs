@@ -33,7 +33,6 @@ namespace Sort2015.Data
             return _context.DailyGems;
         }
 
-
         // All purpose Add Record method
         public object AddRecord(object entity)
         {
@@ -100,5 +99,6 @@ namespace Sort2015.Data
             }
             return dbEntity.Entity;
         }
+
     }
 }

@@ -45,9 +45,8 @@ namespace Sort2015.Services
             }
         }
 
-       public DailyGem AddDailyGem(DailyGem dailyGem)
+        public DailyGem AddDailyGem(DailyGem dailyGem)
         {
-
             return _repository.AddRecord(dailyGem) as DailyGem;
         }
 
