@@ -64,6 +64,10 @@
 			EnableCorsAttribute CorsAttribute = new EnableCorsAttribute("*", "*", "GET,POST");
 			config.EnableCors(CorsAttribute);
 
+			or attribute based: 
+
+			[EnableCors("*", "*", "GET,POST")]
+
 4. -------------- ADD CSVMediaTypeFormatter  ---------------
 
              config.Formatters.Add(new CSVMediaTypeFormatter());
