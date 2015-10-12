@@ -1,5 +1,6 @@
 ﻿using Sort2015.Data.Models;
 using Sort2015.Services;
+using Sort2015.Web.Security;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -30,6 +31,7 @@ namespace Sort2015.Web.Controllers
             return _glFeedService.GetDailyGems();
         }
 
+        [BasicAuth]
         [HttpPost]
         [Route("api/dailygems")]
         public DailyGem AddDailyGem(DailyGem dailyGem)
