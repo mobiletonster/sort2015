@@ -49,6 +49,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Author.cs" />
     <Compile Include="DailyGem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

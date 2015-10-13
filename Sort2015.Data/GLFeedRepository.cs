@@ -10,6 +10,7 @@ namespace Sort2015.Data
     public interface IGLFeedRepository
     {
         IQueryable<DailyGem> GetDailyGems();
+        IQueryable<Author> GetAuthors();
     }
     public class GLFeedRepository: IGLFeedRepository
     {
@@ -27,6 +28,11 @@ namespace Sort2015.Data
         public IQueryable<DailyGem> GetDailyGems()
         {
             return _context.DailyGems;
+        }
+
+        public IQueryable<Author> GetAuthors()
+        {
+            return _context.Authors;
         }
     }
 }

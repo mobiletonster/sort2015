@@ -14,6 +14,7 @@ namespace Sort2015.Data
         }
 
         public virtual DbSet<DailyGem> DailyGems { get; set; }
+        public virtual DbSet<Author> Authors { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
