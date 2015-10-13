@@ -12,6 +12,7 @@ namespace Sort2015.Data
     public interface IGLFeedRepository
     {
         IQueryable<DailyGem> GetDailyGems();
+        IQueryable<Author> GetAuthors();
         object AddRecord(object entity);
         object UpdateRecord(object entity);
     }
@@ -31,6 +32,11 @@ namespace Sort2015.Data
         public IQueryable<DailyGem> GetDailyGems()
         {
             return _context.DailyGems;
+        }
+
+        public IQueryable<Author> GetAuthors()
+        {
+            return _context.Authors;
         }
 
         // All purpose Add Record method

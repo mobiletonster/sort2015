@@ -14,6 +14,7 @@ namespace Sort2015.Data
         }
 
         public virtual DbSet<DailyGem> DailyGems { get; set; }
+        public virtual DbSet<Author> Authors { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -55,6 +56,18 @@ namespace Sort2015.Data
 
             modelBuilder.Entity<DailyGem>()
                 .Property(e => e.LangCode)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<Author>()
+                .Property(e => e.AuthorName)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<Author>()
+                .Property(e => e.ImageName)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<Author>()
+                .Property(e => e.ImageOrientation)
                 .IsUnicode(false);
         }
     }

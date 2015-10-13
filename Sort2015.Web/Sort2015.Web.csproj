@@ -161,14 +161,15 @@
   <ItemGroup>
     <Compile Include="App_Start\SwaggerConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
-    <Compile Include="Controllers\DailyGemsController.cs" />
+    <Compile Include="Controllers\LdsDailyGemsController.cs" />
     <Compile Include="Extensions\CustomActionResult.cs" />
     <Compile Include="Extensions\ExtensionMethods.cs" />
     <Compile Include="Formatters\CSVMediaTypeFormatter.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="ODataControllers\DailyGemsOdataController.cs" />
+    <Compile Include="ODataControllers\AuthorsController.cs" />
+    <Compile Include="ODataControllers\DailyGemsController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Security\ApiAuthAttribute.cs" />
     <Compile Include="Security\BasicAuthAttribute.cs" />

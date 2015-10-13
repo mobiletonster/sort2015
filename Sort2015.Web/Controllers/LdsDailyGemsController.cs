@@ -12,16 +12,16 @@ using System.Web.Http.Description;
 
 namespace Sort2015.Web.Controllers
 {
-    public class DailyGemsController : ApiController
+    public class LdsDailyGemsController : ApiController
     {
         private IGLFeedServices _glFeedService;
 
-        public DailyGemsController()
+        public LdsDailyGemsController()
         {
             _glFeedService = new GLFeedServices();
         }
 
-        public DailyGemsController(IGLFeedServices glFeedService)
+        public LdsDailyGemsController(IGLFeedServices glFeedService)
         {
             _glFeedService = glFeedService;
         }

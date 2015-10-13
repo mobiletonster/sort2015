@@ -10,10 +10,10 @@ using System.Web.Http;
 
 namespace Sort2015.Web.ODataControllers
 {
-    public class DailyGemsOdataController: ODataController
+    public class DailyGemsController: ODataController
     {
         private GLFeedContext context;
-        public DailyGemsOdataController()
+        public DailyGemsController()
         {
             context = new GLFeedContext();
         }
@@ -24,6 +24,7 @@ namespace Sort2015.Web.ODataControllers
             return context.DailyGems;
         }
 
+        [EnableQuery]
         public SingleResult<DailyGem> GetDailyGem([FromODataUri] int id)
         {
             return SingleResult.Create(context.DailyGems.Where(m => m.Id == id));

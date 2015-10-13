@@ -1,4 +1,6 @@
-﻿using Sort2015.Data.Models;
+﻿using Newtonsoft.Json.Serialization;
+using Sort2015.Data.Models;
+using Sort2015.Web.Formatters;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,6 +13,10 @@ namespace Sort2015.Web
     {
         public static void Register(HttpConfiguration config)
         {
+            // Use camel case for JSON data.
+            config.Formatters.JsonFormatter.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
+            config.Formatters.Add(new CSVMediaTypeFormatter());
+
             // Web API configuration and services
 
             // Web API routes
@@ -24,6 +30,8 @@ namespace Sort2015.Web
 
             ODataConventionModelBuilder builder = new ODataConventionModelBuilder();
             builder.EntitySet<DailyGem>("DailyGems");
+            builder.EntitySet<Author>("Authors");
+
             config.Routes.MapODataRoute("ODataRoute", "odata", builder.GetEdmModel());
         }
     }
