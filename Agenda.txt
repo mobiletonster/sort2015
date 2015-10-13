@@ -7,6 +7,7 @@
 7) Lets strip the object down smaller and make a simple ViewModel.
 8) Lets add CamelCaseResolver to WebApiConfigs.cs Register method to make pretty JSON.
 8a) Lets add the IncludeErrorDetailPolicy while we are in here.
+8b) While we are here, how to enable CORS.
 9) Lets add Swagger via Swashbuckle.
 10) Change the return type to IHttpActionResult 
 11) Add annotation attribute [ResponseType(typeof(ENTITY))] where ENTITY is the entity type

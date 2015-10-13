@@ -73,6 +73,16 @@
 
             config.IncludeErrorDetailPolicy = IncludeErrorDetailPolicy.Always;
 
+3b. --------------  Enabling CORS  ---------------------------------------
+
+			EnableCorsAttribute CorsAttribute = new EnableCorsAttribute("*", "*", "GET,POST");
+			config.EnableCors(CorsAttribute);
+
+			or attribute based: 
+
+			[EnableCors("*", "*", "GET,POST")]
+
+
 4. -------------- ADD CSVMediaTypeFormatter to App_Start WebApiConfig.cs ---------------
 
              config.Formatters.Add(new CSVMediaTypeFormatter());
