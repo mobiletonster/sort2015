@@ -10,6 +10,7 @@ namespace Sort2015.Web.Controllers
 {
     public class DailyGemsController : ApiController
     {
+        private GLFeedServices _glFeedServices;
         
     }
 }
