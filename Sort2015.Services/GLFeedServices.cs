@@ -12,6 +12,7 @@ namespace Sort2015.Services
     {
         List<DailyGem> GetDailyGems();
         List<DailyGem> GetDailyGems(int pageSize = 0, int page = 0);
+        DailyGem AddDailyGem(DailyGem dailyGem);
     }
     public class GLFeedServices: IGLFeedServices
     {
@@ -42,6 +43,11 @@ namespace Sort2015.Services
             {
                 return _repository.GetDailyGems().Skip(page * pageSize).Take(pageSize).ToList();
             }
+        }
+
+        public DailyGem AddDailyGem(DailyGem dailyGem)
+        {
+            return _repository.AddRecord(dailyGem) as DailyGem;
         }
 
     }
